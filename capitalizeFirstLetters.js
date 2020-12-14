@@ -1,6 +1,6 @@
 function capitalizeFirstLetter(input) {
   const splitStr = input.split(' '); 
-  //met chaque élément de l'input dans un tableau avec '' pour chacun
+  //met chaque élément de l'input dans un tableau
   for (let i= 0; i < splitStr.length; i++){ 
     // pour chaque élément
     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1); 
@@ -9,11 +9,4 @@ function capitalizeFirstLetter(input) {
   return splitStr.join(' ');  // regroupe chaque élément du tableau et les met un espace entre chaque
 }
 
-const assert = require('assert');
-
-assert.strictEqual(typeof capitalizeFirstLetter, 'function');
-assert.strictEqual(capitalizeFirstLetter.length, 1);
-assert.strictEqual(capitalizeFirstLetter('i am learning TDD'), 'I Am Learning TDD');
-assert.strictEqual(capitalizeFirstLetter('zorro'), 'Zorro');
-assert.strictEqual(capitalizeFirstLetter('z'), 'Z');
-assert.strictEqual(capitalizeFirstLetter(''), '');
+module.exports = capitalizeFirstLetter;
