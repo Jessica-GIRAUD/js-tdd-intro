@@ -8,5 +8,4 @@ function capitalizeFirstLetter(input) {
   }
   return splitStr.join(' ');  // regroupe chaque élément du tableau et les met un espace entre chaque
 }
-
 module.exports = capitalizeFirstLetter;
